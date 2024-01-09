@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-public class AreaTest {
+public class RectangleTest {
     private Rectangle rectangle1;
 
     @BeforeEach
@@ -18,7 +18,7 @@ public class AreaTest {
     }
 
     @Test
-    public void testArea() {
+    public void shouldReturnAreaOfTwentyWhenLengthIsFiveAndBreadthIsFour() {
         assertEquals( 20, rectangle1.area(),"Area should be calculated correctly");
     }
 
