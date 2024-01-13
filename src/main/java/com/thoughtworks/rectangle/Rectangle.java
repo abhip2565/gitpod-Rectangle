@@ -2,26 +2,28 @@ package com.thoughtworks.rectangle;
 
 public class Rectangle {
 
-     int length;
-     int breadth;
-     int area;
-     Rectangle(int length,int breadth)
+     private final double length;
+     private final double breadth;
+     
+     Rectangle(double length,double breadth)
      {
-        if (length < 0 || breadth < 0) {
-            throw new IllegalArgumentException("Length and breadth must be non-negative");
-        }
         this.length=length;
         this.breadth=breadth;
         
      }
     
-     public Rectangle(double length, double breadth) {
-      throw new IllegalArgumentException("Length and breadth must be integers");
-   }
+     
 
-   public int area()
+   public double area()
      {
-        area=length*breadth;
+      double area=length*breadth;
         return area;
      }
+
+
+
+public double perimeter() {
+   double perimeter=2*(length+breadth);
+   return perimeter;
+}
 }
